@@ -21,15 +21,15 @@ module.exports = () => {
       //generate html and inject into bundle
       new HtmlWebpackPlugin({
         template: './index.html',
-        filename: 'index.html',
+        title: 'Just Another Test Editor',
       }),
       //generate/inject service worker
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
-       //generate/inject manifest.json
-       new WebpackPwaManifest({
+      //generate/inject manifest.json
+      new WebpackPwaManifest({
         name: 'Just Another Test Editor',
         short_name: 'JATE',
         description: 'A simple text editor',
